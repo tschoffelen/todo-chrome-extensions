@@ -21,15 +21,14 @@ function ___GOFaddButton() {
   $("#omni-button").click(function() {
     var c = ___gmail.get.displayed_email_data();
 
-    var s = "Reply to email: ";
-    s += c.subject;
+    var s = c.subject || "Reply to email";
 
     var n = "";
     n += "People involved: ";
     var xx = [];
     for (var i in c.people_involved) {
       var pp = c.people_involved[i];
-      xx.push(pp[0]);
+      xx.push(pp[0] || pp[1]);
     }
     n += xx.join(", ");
     n += "\n\n";
