@@ -2,22 +2,23 @@
   var ___gmail, ___addButton;
 
   function ___GOFaddButton() {
-    if ($("#omni-button").length || $('.J-JN-M-I.G-as3:visible').length) {
+    if ($("#omni-button").length) {
       return;
     }
 
-    ___gmail.dom
-      .toolbar()
-      .find("div:nth-child(2)")
-      .first()
-      .after(
-        '<div class="G-Ni J-J5-Ji">' +
-          '<div class="T-I J-J5-Ji T-I-ax7" id="omni-button" role="button" tabindex="0" ' +
-          'data-tooltip="Add to OmniFocus" aria-label="Add to OmniFocus" style="user-select: none;">' +
-          '<div class="asa"><div class="T-I-J3 J-J5-Ji" style="width: 21px; height: 21px;' +
-          "background:url(//s3-eu-west-1.amazonaws.com/tsfil/omni-gnIII.svg) no-repeat center; " +
-          'background-size: contain;"></div></div></div></div>'
-      );
+    var el = ___gmail.dom.toolbar().find("div:nth-child(2)").first();
+    if(!el.is(':visible')){
+      return;
+    }
+
+    el.after(
+      '<div class="G-Ni J-J5-Ji">' +
+      '<div class="T-I J-J5-Ji T-I-ax7" id="omni-button" role="button" tabindex="0" ' +
+      'data-tooltip="Add to OmniFocus" aria-label="Add to OmniFocus" style="user-select: none;">' +
+      '<div class="asa"><div class="T-I-J3 J-J5-Ji" style="width: 21px; height: 21px;' +
+      "background:url(//s3-eu-west-1.amazonaws.com/tsfil/omni-gnIII.svg) no-repeat center; " +
+      'background-size: contain;"></div></div></div></div>'
+    );
 
     $("#omni-button").click(function() {
       var c = ___gmail.get.displayed_email_data();

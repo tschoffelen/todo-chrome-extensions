@@ -1,6 +1,6 @@
 {
   "name": "Add to OmniFocus for Gmail",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description":
     "Adds a button to Gmail threads to add them to OmniFocus, including a link to the message.",
   "content_scripts": [
