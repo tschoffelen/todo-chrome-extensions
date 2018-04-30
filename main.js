@@ -21,7 +21,15 @@
     );
 
     $("#omni-button").click(function() {
-      var c = ___gmail.get.displayed_email_data();
+      var c = null;
+      try {
+        c = ___gmail.get.displayed_email_data();
+        if (!c) {
+          c = __gmx.get.email_data(__gmx.get.email_id());
+        }
+      } catch(e) {
+        c = __gmx.get.email_data(__gmx.get.email_id());
+      }
 
       var s = c.subject || "Reply to email";
 
@@ -55,6 +63,7 @@
     }
 
     ___gmail = new Gmail();
+    window.__gmx = ___gmail;
     if (___gmail.get.current_page() === "email") {
       ___GOFaddButton();
     }
