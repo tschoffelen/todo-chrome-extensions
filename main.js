@@ -2,6 +2,7 @@
   var ___gmail, ___addButton;
 
   function ___GOFaddButton() {
+    var $ = __jq;
     if ($("#omni-button").length) {
       return;
     }
