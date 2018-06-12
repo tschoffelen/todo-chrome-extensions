@@ -26,10 +26,10 @@
       try {
         c = ___gmail.get.displayed_email_data();
         if (!c) {
-          c = __gmx.get.email_data(__gmx.get.email_id());
+          c = __gmx.get.email_data(__gmx.get.thread_id());
         }
       } catch(e) {
-        c = __gmx.get.email_data(__gmx.get.email_id());
+        c = __gmx.get.email_data(__gmx.get.thread_id());
       }
 
       var s = c.subject || "Reply to email";
@@ -50,10 +50,7 @@
         encodeURIComponent(s) +
         "&amp;note=" +
         encodeURIComponent(n);
-      document.body.insertAdjacentHTML(
-        "afterEnd",
-        '<iframe src="' + url + '" style="display:none" />'
-      );
+      location.href = url;
     });
   }
 
