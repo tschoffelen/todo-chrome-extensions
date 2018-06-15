@@ -26,10 +26,10 @@
       try {
         c = ___gmail.get.displayed_email_data();
         if (!c) {
-          c = __gmx.get.email_data(__gmx.get.email_id());
+          c = __gmx.get.email_data(__gmx.get.thread_id());
         }
       } catch(e) {
-        c = __gmx.get.email_data(__gmx.get.email_id());
+        c = __gmx.get.email_data(__gmx.get.thread_id());
       }
 
       var s = c.subject || "Reply to email";
@@ -48,7 +48,7 @@
       var url =
         "omnifocus:///add?name=" +
         encodeURIComponent(s) +
-        "&amp;note=" +
+        "&note=" +
         encodeURIComponent(n);
       location.href = url;
     });
