@@ -8,12 +8,17 @@
     }
 
     var el = ___gmail.dom.toolbar().find("div:nth-child(2)").first();
-    if(!el.is(':visible')){
+    if (!el.is(':visible')) {
       return;
     }
 
+    var customCss = '';
+    if ($('.apj').length) {
+      customCss = ' style="margin-left: 12px !important; margin-top: -1px; padding-right: 0;"';
+    }
+
     el.after(
-      '<div class="G-Ni J-J5-Ji">' +
+      '<div class="G-Ni J-J5-Ji"' + customCss + '>' +
       '<div class="T-I J-J5-Ji T-I-ax7" id="omni-button" role="button" tabindex="0" ' +
       'data-tooltip="Add to OmniFocus" aria-label="Add to OmniFocus" style="user-select: none;">' +
       '<div class="asa"><div class="T-I-J3 J-J5-Ji" style="width: 21px; height: 21px;' +
