@@ -17,12 +17,15 @@
       customCss = ' style="margin-left: 12px !important; margin-top: -1px; padding-right: 0;"';
     }
 
+    var darkMode = !!$('.wl .a4t').length;
+    var iconUrl = darkMode ? "//schof.co/f/sfs/omni-light.svg" : "//schof.co/f/e8x/omni-dark.svg";
+
     el.after(
       '<div class="G-Ni J-J5-Ji"' + customCss + '>' +
       '<div class="T-I J-J5-Ji T-I-ax7" id="omni-button" role="button" tabindex="0" ' +
       'data-tooltip="Add to OmniFocus" aria-label="Add to OmniFocus" style="user-select: none;">' +
       '<div class="asa"><div class="T-I-J3 J-J5-Ji" style="width: 21px; height: 21px;' +
-      "background:url(//s3-eu-west-1.amazonaws.com/tsfil/omni-gnIII.svg) no-repeat center; " +
+      "background:url(" + iconUrl + ") no-repeat center; " +
       'background-size: contain;"></div></div></div></div>'
     );
 
