@@ -4,10 +4,11 @@
   "workspaces": [
     "packages/*"
   ],
-  "version": "2.0.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "yarn workspaces foreach --all --parallel run build",
-    "postversion": "yarn workspaces foreach --all --parallel version --new-version $npm_package_version"
+    "update-versions": "yarn workspaces foreach --all --parallel version $npm_package_version",
+    "version": "yarn update-versions && yarn build"
   },
   "devDependencies": {
     "esbuild": "^0.20.2"
