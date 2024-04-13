@@ -13,6 +13,7 @@ Use `yarn` to get started.
 
 You can build ZIP files by running `yarn build` in the root directory, or in each of the individual packages.
 
+There is a `yarn dev` to auto rebuild as you develop.
 
 ## Deployment
 

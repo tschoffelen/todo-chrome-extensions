@@ -1,15 +1,21 @@
 {
   "name": "@includable-chrome/shared",
   "description": "Shared utilities used by our Chrome extensions.",
+  "type": "module",
   "version": "1.0.0",
   "gmail-js": "^1.1.14",
   "jquery": "^3.7.1",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": {
+    "chrome-bundle": "bin/chrome-bundle.js",
+    "chrome-watch": "bin/chrome-watch.js"
+  },
   "dependencies": {
     "gmail-js": "^1.1.14",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "@types/chrome": "^0.0.266"
+    "@types/chrome": "^0.0.266",
+    "chokidar": "^3.6.0"
   }
 }

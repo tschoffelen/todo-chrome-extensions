@@ -1,7 +1,7 @@
 {
-  "name": "@includable-chrome/gmail-omnifocus",
+  "name": "@includable-chrome/gmail-things",
   "version": "1.0.0",
-  "description": "Add to OmniFocus for Gmail.",
+  "description": "Add to Things for Gmail.",
   "main": "index.js",
   "repository": "https://github.com/includable/chrome-extensions.git",
   "author": "Thomas Schoffelen <info@includable.com>",
