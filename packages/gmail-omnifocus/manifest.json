@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Add to OmniFocus for Gmail",
   "short_name": "OmniFocus",
-  "version": "2.0.0",
+  "version": "1.2.0",
   "description": "Adds a button to Gmail threads to add them to OmniFocus, including a link to the message.",
   "content_scripts": [
     {
