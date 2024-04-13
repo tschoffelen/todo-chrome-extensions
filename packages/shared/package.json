@@ -1,0 +1,15 @@
+{
+  "name": "@includable-chrome/shared",
+  "description": "Shared utilities used by our Chrome extensions.",
+  "version": "1.0.0",
+  "gmail-js": "^1.1.14",
+  "jquery": "^3.7.1",
+  "main": "index.js",
+  "dependencies": {
+    "gmail-js": "^1.1.14",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.266"
+  }
+}

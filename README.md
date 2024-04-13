@@ -1,7 +1,19 @@
-# Add to OmniFocus for Gmail
+# Task management extensions for Google Chrome
 
-Chrome extension, which adds a button to Gmail threads to add them to OmniFocus, including a link to the message.
+Several Chrome extensions to help improve your productivity.
 
-### Install
+## Install the extensions
 
-[🌎 Install from the Chrome Web Store](https://chrome.google.com/webstore/detail/add-to-omnifocus-for-gmail/ihgdbplidfgbloomplhlgncccbnpfdpm)
+- [🔖 Add to OmniFocus for Gmail](https://chrome.google.com/webstore/detail/add-to-omnifocus-for-gmail/ihgdbplidfgbloomplhlgncccbnpfdpm)
+- [🔖 Add to Things for Gmail](https://chromewebstore.google.com/detail/add-to-things-for-gmail/mkpapmkjeddhenbmhdihdiiijgckifln)
+
+## Local development
+
+Use `yarn` to get started.
+
+You can build ZIP files by running `yarn build` in the root directory, or in each of the individual packages.
+
+
+## Deployment
+
+New versions are automatically released to the Chrome Web Store via GitHub Actions.
