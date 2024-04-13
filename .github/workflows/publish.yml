@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: yarn && yarn build
     - name: Publish gmail-omnifocus
-      uses: mnao305/chrome-extension-upload@v5
+      uses: mnao305/chrome-extension-upload@v5.0.0
       with:
         file-path: packages/gmail-omnifocus/dist/extension.zip
         extension-id: ihgdbplidfgbloomplhlgncccbnpfdpm
@@ -27,7 +27,7 @@ jobs:
         client-secret: ${{ secrets.CLIENT_SECRET }}
         refresh-token: ${{ secrets.REFRESH_TOKEN }}
     - name: Publish gmail-things
-      uses: mnao305/chrome-extension-upload@v5
+      uses: mnao305/chrome-extension-upload@v5.0.0
       with:
         file-path: packages/gmail-things/dist/extension.zip
         extension-id: mkpapmkjeddhenbmhdihdiiijgckifln
