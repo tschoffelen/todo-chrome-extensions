@@ -1,0 +1,36 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    name: Publish extensions
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: yarn
+    - name: Build
+      run: yarn && yarn build
+    - name: Publish gmail-omnifocus
+      uses: mnao305/chrome-extension-upload@v5
+      with:
+        file-path: packages/gmail-omnifocus/dist/extension.zip
+        extension-id: ihgdbplidfgbloomplhlgncccbnpfdpm
+        client-id: ${{ secrets.CLIENT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        refresh-token: ${{ secrets.REFRESH_TOKEN }}
+    - name: Publish gmail-things
+      uses: mnao305/chrome-extension-upload@v5
+      with:
+        file-path: packages/gmail-things/dist/extension.zip
+        extension-id: mkpapmkjeddhenbmhdihdiiijgckifln
+        client-id: ${{ secrets.CLIENT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        refresh-token: ${{ secrets.REFRESH_TOKEN }}
