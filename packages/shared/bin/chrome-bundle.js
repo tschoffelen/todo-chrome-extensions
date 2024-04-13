@@ -2,4 +2,4 @@
 
 import { build } from "./build.js";
 
-await build();
+await build(true, process.argv[2]);

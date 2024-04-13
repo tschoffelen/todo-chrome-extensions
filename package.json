@@ -7,8 +7,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "yarn workspaces foreach --all --parallel run build",
-    "update-versions": "yarn workspaces foreach --all --parallel version $npm_package_version",
-    "version": "yarn update-versions && yarn build"
+    "version": "yarn workspaces foreach --all --parallel run bundle $npm_package_version"
   },
   "devDependencies": {
     "esbuild": "^0.20.2"
