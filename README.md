@@ -18,3 +18,10 @@ There is a `yarn dev` to auto rebuild as you develop.
 ## Deployment
 
 New versions are automatically released to the Chrome Web Store via GitHub Actions.
+
+Create a new version by running:
+
+```shell
+npm version minor
+git push --tags
+```
