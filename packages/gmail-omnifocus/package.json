@@ -9,7 +9,7 @@
   "scripts": {
     "bundle": "chrome-bundle",
     "dev": "chrome-watch",
-    "build": "yarn bundle && rm -rf dist/extension.zip && zip -r dist/extension.zip dist resources",
+    "build": "yarn bundle && rm -rf dist/extension.zip && zip -r dist/extension.zip manifest.json dist resources",
     "prepare": "yarn build"
   },
   "dependencies": {
